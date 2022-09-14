@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "ESNext",
+        "module": "commonjs",
+        "jsx": "react",
+        "declaration": true,
+        "strict": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true
+    },
+    "include": [
+        "src",
+        "typings.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

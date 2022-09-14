@@ -1,0 +1,59 @@
+{
+  "name": "react-ui-baibai",
+  "version": "1.0.0",
+  "description": "react组件库",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baibai2047/react-ui-baibai.git"
+  },
+  "keywords": [],
+  "author": "baibai2047",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baibai2047/react-ui-baibai/issues"
+  },
+  "homepage": "https://github.com/baibai2047/react-ui-baibai#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "@umijs/fabric": "^3.0.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.3"
+  },
+  "lint-staged": {
+    "src/**/*.ts?(x)": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.less": [
+      "stylelint --syntax less --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commit -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
+}
