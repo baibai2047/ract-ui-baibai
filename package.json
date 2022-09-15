@@ -4,7 +4,11 @@
   "description": "react组件库",
   "main": "index.js",
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "dev": "dumi dev",
+    "build:site": "rimraf doc-site && dumi build",
+    "deploy:site": "npm run build:site && gh-pages -d doc-site",
+    "preview:site": "cross-env SITE_BUILD_ENV=PREVIEW npm run build:site && serve doc-site"
   },
   "repository": {
     "type": "git",
@@ -24,11 +28,15 @@
     "@types/react-dom": "^18.0.6",
     "@umijs/fabric": "^3.0.0",
     "commitizen": "^4.2.5",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
+    "dumi": "^1.1.47",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.0.1",
     "typescript": "^4.8.3"
   },
   "lint-staged": {
